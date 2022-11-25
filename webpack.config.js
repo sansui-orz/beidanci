@@ -7,6 +7,9 @@ const config = {
   entry: {
     main: path.join(__dirname, 'src/index')
   },
+  devServer: {
+    historyApiFallback: true
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.tsx', '.ts', '.json']
   },
@@ -76,18 +79,12 @@ const config = {
     },
   },
   plugins: [
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'papers-componsing',
+      template: './index.html'
+    })
   ]
-}
-
-if (process.env.RUN_IN_BROWSER) {
-  config.devServer = {
-    historyApiFallback: true
-  }
-  config.plugins.push(new HtmlWebpackPlugin({
-    title: 'papers-componsing',
-    template: './index.html'
-  }))
 }
 
 module.exports = config

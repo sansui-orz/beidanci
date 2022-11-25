@@ -5,13 +5,17 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    frame: false,
+    // frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
-  win.loadFile('index.html')
+  if (process.env.NODE_ENV === 'developer') {
+    win.loadURL('http://localhost:1100')
+  } else {
+    console.log('还么开发，谢谢')
+  }
 }
 
 app.whenReady().then(() => {

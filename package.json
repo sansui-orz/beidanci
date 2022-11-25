@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "npm run start-react && electron .",
+    "dev": "npm run start-react && npm run start",
+    "start": "cross-env NODE_ENV=developer electron .",
     "start-react": "webpack-dev-server --port 1100",
     "build": "webpack",
     "run-in-browser": "cross-env RUN_IN_BROWSER=true webpack-dev-server --port 1100"

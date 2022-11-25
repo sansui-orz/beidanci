@@ -1,0 +1,48 @@
+{
+  "name": "beidanci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run start-react && electron .",
+    "start-react": "webpack-dev-server --port 1100",
+    "build": "webpack",
+    "run-in-browser": "cross-env RUN_IN_BROWSER=true webpack-dev-server --port 1100"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.2",
+    "electron": "^21.3.1",
+    "eslint": "^7.32.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.31.11",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^3.9.10",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-router-dom": "^5.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3"
+  }
+}
